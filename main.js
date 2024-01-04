@@ -33,23 +33,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
 /*==================== QUALIFICATION TABS ====================*/
-const tabs = document.querySelectorAll('[data-target]'),
-        tabContents = document.querySelectorAll('[data-content]')
-tabs.forEach({tabs=>
-    tabs.addEventListener('click',()=>{
-        const target = document.querySelector(tab.dataset.target)
 
-        tabContents.forEach(tabContent =>{
-            tabContent.classList.remove('about_active')
-        })
-        target.classList.add('about_active')
-
-        tabs.forEach(tab=>{
-            tab.classList.remove('about_active')
-        })
-        tabs.classList.add('about_active')
-    })
-})
 /*==================== SERVICES MODAL ====================*/
 
 
