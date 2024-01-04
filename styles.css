@@ -405,9 +405,6 @@ width: 200%;
   margin-bottom: var(--mb-1);
 }
 
-.about [data-content]{
-  display: none;
-}
 
 
 /*==================== SKILLS ====================*/
