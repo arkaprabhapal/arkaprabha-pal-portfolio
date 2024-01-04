@@ -376,7 +376,7 @@ width: 200%;
 }
 
 .about_data{
- max-width: 34em;
+ max-width: 20em;
  padding-top: 2em;
  padding-bottom: 2em;
  position: relative;
@@ -385,13 +385,19 @@ width: 200%;
 .about_data div{
   border: 2px solid var(--first-color);
   border-radius: 1em;
-  padding: 1.5em;
+  padding: .7em;
 }
 
 .about_data:nth-child(odd){
   border-left: 3px solid var(--first-color);
-  padding-left: 3em;
-  transform: translateX(17em);
+  padding-left: 1em;
+  transform: translateX(19em);
+}
+
+.about_data:nth-child(even){
+  border-right: 3px solid var(--first-color);
+  padding-right: 1em;
+  transform: translateX(-.84em);
 }
 
 .qualification_title{
