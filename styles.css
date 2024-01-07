@@ -370,34 +370,15 @@ width: 200%;
   margin-right: var(--mb-0-25);
 }
 
+.about_data{
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+}
+
 .qualification_calender{
   font-size: var(--medium-font-size);
   color: var(--text-color-light);
-}
-
-.about_data{
- max-width: 20em;
- padding-top: 2em;
- padding-bottom: 2em;
- position: relative;
-}
-
-.about_data div{
-  border: 2px solid var(--first-color);
-  border-radius: 1em;
-  padding: .7em;
-}
-
-.about_data:nth-child(odd){
-  border-left: 3px solid var(--first-color);
-  padding-left: 1em;
-  transform: translateX(19em);
-}
-
-.about_data:nth-child(even){
-  border-right: 3px solid var(--first-color);
-  padding-right: 1em;
-  transform: translateX(-.84em);
 }
 
 .qualification_title{
@@ -411,8 +392,33 @@ width: 200%;
   margin-bottom: var(--mb-1);
 }
 
+.qualification_rounder{
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+}
 
+.qualification_line{
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: var(--first-color);
+  transform: translate(6px, -7px);
+}
 
+.about [data-content]{
+  display: none;
+}
+
+.qualification_active[data-content]{
+  display: block;
+}
+
+.about_button.qualification_active{
+  color: var(--first-color);
+}
 /*==================== SKILLS ====================*/
 
 
