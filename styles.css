@@ -632,6 +632,12 @@ width: 200%;
   column-gap: .5rem;
 }
 
+.contact_response{
+  font-size: var(--small-font-size);
+  position: relative;
+  left: 1.5rem;
+}
+
 .contact_button:hover{
   color: var(--first-color);
 }
