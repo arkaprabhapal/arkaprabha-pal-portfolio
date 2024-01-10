@@ -49,9 +49,25 @@ tabs.forEach(tab=>{
     })
 })
 
-
-
 /*==================== ACCORDION SKILLS ====================*/
+const skillsContent = document.getElementsByClassName('skills_content'),
+      skillsHeader = document.querySelectorAll('.skills_header')
+
+function toggleSkills(){
+    let itemClass = this.parentNode.className
+
+    for(i = 0 ; i < skillsContent.length ; i++){
+        skillsContent[i].className = 'skills_content skills_close'
+    }
+
+    if(itemClass === 'skills_content skills_close'){
+        this.parentNode.className = 'skills_content skills_open'
+    }
+}
+
+skillsHeader.forEach((el)=>{
+    el.addEventListener('click',toggleSkills)
+})
 
 /*==================== SERVICES MODAL ====================*/
 
@@ -72,3 +88,34 @@ tabs.forEach(tab=>{
 
 
 /*==================== DARK LIGHT THEME ====================*/ 
+
+/*==================== EMAIL JS ======================*/
+const contactForm = document.getElementById('contact-form'),
+        contactName = document.getElementById('contact-name'),
+        contactEmail = document.getElementById('contact-email'),
+        contactMessage = document.getElementById('contact-name')
+        
+
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    if(contactName.value === '' || contactEmail.value === ''){
+        contactMessage.classList.remove('color-blue')
+        contactMessage.classList.add('color-red')
+
+        contactMessage.textContent = 'Write all the input fields'
+    }
+    else{
+        //serviceID-templateID-#form-publickey
+        emailjs.sendForm('service_m7wnx4u','template_ah5s70x','#contact-form','o4iMllnMJGAW7Gm8u')
+            .then(() => {
+                contactMessage.classList.add('color-blue')
+                contactMessage.textContent = 'Message Sent ✅'
+
+                setTimeout(() =>{
+                    contactMessage.textContent = ''
+                }, 5000)
+            })
+    }
+}
+contactEmail.addEventListener('submit', sendEmail)
