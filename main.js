@@ -93,29 +93,35 @@ skillsHeader.forEach((el)=>{
 const contactForm = document.getElementById('contact-form'),
         contactName = document.getElementById('contact-name'),
         contactEmail = document.getElementById('contact-email'),
-        contactMessage = document.getElementById('contact-name')
-        
+        contactMessage = document.getElementById('contact-message'),
+        contactResponse = document.getElementById('contact-response')
 
 const sendEmail = (e) =>{
     e.preventDefault()
 
-    if(contactName.value === '' || contactEmail.value === ''){
-        contactMessage.classList.remove('color-blue')
-        contactMessage.classList.add('color-red')
+    if(contactName.value === '' || contactEmail.value === '' || contactMessage.value === ''){
+        contactResponse.classList.remove('color-blue')
+        contactResponse.classList.add('color-red')
 
-        contactMessage.textContent = 'Write all the input fields'
+        contactResponse.textContent = 'Write all the input fields'
     }
     else{
         //serviceID-templateID-#form-publickey
         emailjs.sendForm('service_m7wnx4u','template_ah5s70x','#contact-form','o4iMllnMJGAW7Gm8u')
             .then(() => {
-                contactMessage.classList.add('color-blue')
-                contactMessage.textContent = 'Message Sent ✅'
+                contactResponse.classList.add('color-blue')
+                contactResponse.textContent = 'Message Sent ✅'
 
                 setTimeout(() =>{
-                    contactMessage.textContent = ''
+                    contactResponse.textContent = ''
                 }, 5000)
+            }, (error) =>{
+                alert('SOMETHING HAS FAILED !!!', error)
             })
+
+        contactName.value = ''
+        contactEmail.value = ''
+        contactMessage.value = ''
     }
 }
-contactEmail.addEventListener('submit', sendEmail)
+contactForm.addEventListener('submit', sendEmail)
