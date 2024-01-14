@@ -107,8 +107,24 @@ let swiper = new Swiper('.activities_container', {
     keyboard: true,
   });
 
-/*==================== TESTIMONIAL ====================*/
+/*==================== PROJECTS ====================*/
+/*let mixerProjects = mixitup('.projects_container', {
+    selectors: {
+        target: '.projects_card'
+    },
+    animation: {
+        duration: 3000
+    }
+});
 
+const linkWork = document.querySelectorAll('.projects_item')
+
+function activeWork(){
+    linkWork.forEach(l=> l.classList.remove('active-projects'))
+    this.classList.add('active-projects')
+}
+
+linkWork.forEach(l=> l.addEventListener('click', activeWork))*/
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
