@@ -322,7 +322,7 @@ img {
 }
 
 .home_scroll{
-display: flex;
+display: none;
 flex-direction: row;
 width: 200%;
 }
@@ -337,11 +337,11 @@ width: 200%;
 }
 
 .home_scroll-mouse{
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .home_scroll-name{
-  font-size: var(--medium-font-size);
+  font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
   margin-right: var(--mb-0-25);
@@ -441,7 +441,7 @@ width: 200%;
 .swiper-button-prev::after,
 .swiper-button-next::after{
   visibility: hidden;
-    content : '';
+  content: '';
 }
 
 .swiper-activities-icon{
@@ -544,8 +544,6 @@ width: 200%;
 }
 /*==================== SKILLS ====================*/
 
-/*==================== SKILLS ====================*/
-
 .skills_container{
   row-gap: 0;
   display: flex;
@@ -646,6 +644,7 @@ width: 200%;
 .skills_open .skills_arrow{
   transform: rotate(-180deg);
 }
+
 /*==================== CERTIFICATES ====================*/
 .certificates_container{
   gap: 1.5rem;
@@ -693,6 +692,11 @@ width: 200%;
   transition: .4s;
 }
 
+.active_projects{
+  background-color: var(--first-color);
+  color: var(--body-color);
+}
+
 .projects_container{
   padding-top: 1rem;
 }
@@ -722,7 +726,7 @@ width: 200%;
 .projects_img{
   border-radius: 1rem;
   margin-bottom: .75rem;
-  max-width: 500px;
+  max-width: 250px;
 }
 
 .projects_title{
@@ -744,6 +748,7 @@ width: 200%;
   opacity: 0;
   transition: .4s;
   z-index: var(--z-modal);
+  justify-content: center;
 }
 
 .projects_modal-content{
@@ -993,7 +998,7 @@ width: 200%;
 @media screen and (max-width: 350px) {
   .container{
     margin-left: auto;
-    margin-right: var(--mb-1);
+    margin-right: auto;
   }
   
   .nav_menu{
@@ -1195,6 +1200,10 @@ width: 200%;
   }
   .certificates_container{
     grid-template-columns: repeat(3, 238px);
+  }
+
+  .projects_container{
+    grid-template-columns: repeat(2, 8fr);
   }
   .activities_content{
     column-gap: 5rem;
