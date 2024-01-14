@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
@@ -19,7 +20,7 @@
         <div class="nav_menu" id="nav-menu">
           <ul class="nav_list grid">
             <li class="nav_item">
-              <a href="#home" class="nav_link">
+              <a href="#home" class="nav_link active-link">
                 <i class="uil uil-estate nav_icon"></i>Home
               </a>
             </li>
@@ -33,21 +34,22 @@
                 <i class="uil uil-lightbulb-alt nav_icon"></i>Skills
               </a>
             </li>
-            <li class="nav_item">
-              <a href="#experience" class="nav_link">
-                <i class="uil uil-briefcase-alt nav_icon"></i>Experience
-              </a>
-            </li>
+           
             <li class="nav_item">
               <a href="#projects" class="nav_link">
                 <i class="uil uil-file-alt nav_icon"></i>Projects
               </a>
             </li>
-            <li class="nav_item">
+             <!--<li class="nav_item">
+              <a href="#experience" class="nav_link">
+                <i class="uil uil-briefcase-alt nav_icon"></i>Experience
+              </a>
+            </li>-->
+            <!--<li class="nav_item">
               <a href="#achievements" class="nav_link">
                 <i class="uil uil-award nav_icon"></i>Achievements
               </a>
-            </li>
+            </li>-->
             <li class="nav_item">
               <a href="#contact" class="nav_link">
                 <i class="uil uil-message nav_icon"></i>Contact Me
@@ -57,6 +59,8 @@
           <i class="uil uil-times nav_close" id="nav-close"></i>
         </div>
         <div class="nav_btns">
+          <!--Theme Change-->
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
           <div class="nav_toggle" id="nav-toggle">
             <i class="uil uil-apps"></i>
           </div>
@@ -155,7 +159,7 @@
       <section class="about section" id="about">
         <h2 class="section_title">About Me</h2>
         <span class="section_subtitle">Details</span>
-      </section>
+      
 
       <div class="about_container container grid">
 
@@ -186,7 +190,56 @@
           </div>
         </div>
       </div>
+      </section>
 
+      <section class="activities section" id="activities">
+        <h2 class="section_title">Other Activities</h2>
+        <span class="section_subtitle">Here is the details of my other activities</span>
+
+        <div class="activities_container container swiper mySwiper">
+          <div class="swiper-wrapper">
+              <!--========1========-->
+              <div class="activities_content grid swiper-slide">
+                  <img src="tekronika.png" alt="" class="activities_img">
+                  <div class="activities_data">
+                    <h3 class="activities_title">My Own Youtube Channel</h3>
+                    <p class="activities_description">I have my own channel named <b>Tekronika</b> where I upload videos on different projects.
+                    The entire channel is maintained by me.</p>
+                    <a href="https://www.youtube.com/@Tekronika" class="button button-flex button-small activities_button">
+                    Visit Channel
+                    <i class="uil uil-arrow-up-right button_icon"></i>
+                    </a>
+                  </div>
+              
+              </div>
+
+              <!--========2========-->
+              <div class="activities_content grid swiper-slide">
+                <img src="" alt="" class="activities_img">
+                <div class="activities_data">
+                  <h3 class="activities_title">My Own portfolio website</h3>
+                  <p class="activities_description">My own website which is made with html, css and javascript. The website is regularly maintained by me.</p>
+                  <a href="https://www.youtube.com/@Tekronika" class="button button-flex button-small activities_button">
+                  Visit Channel
+                  <i class="uil uil-arrow-up-right button_icon"></i>
+                  </a>
+                </div>
+            
+            </div>
+          </div>
+
+          <!--Add Arrows-->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-activities-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-activities-icon"></i>
+          </div>
+
+          <!--Add Pagination-->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
       <!--==================== QUALIFICATION ====================-->
       <section class="qualification section" id="qualification">
         <h2 class="section_title">Educational Details</h2>
@@ -362,7 +415,7 @@
                 <i class="uil uil-arrow skills_icon"></i>
                 <div>
                   <h1 class="skill_title">Languages</h1>
-                  <span class="skill_subtitle">C,C++,Python,MySQL. DSA in C/C++</span>
+                  <span class="skill_subtitle">C,C++,Python,MySQL,MATLAB, DSA in C/C++</span>
                 </div>
 
                 <i class="uil uil-angle-down skills_arrow"></i>
@@ -389,11 +442,20 @@
                 </div>
                 <div class="skills_data">
                   <div class="skill_titles">
+                    <h3 class="skills_name">MATLAB</h3>
+                    <span class="skills_number">80%</span>
+                  </div>
+                  <div class="skills_bar">
+                    <span class="skills_percentage skills_matlab"></span>
+                  </div>
+                </div>
+                <div class="skills_data">
+                  <div class="skill_titles">
                     <h3 class="skills_name">Python</h3>
                     <span class="skills_number">80%</span>
                   </div>
                   <div class="skills_bar">
-                    <span class="skills_percentage skills_py"></span>
+                    <span class="skills_percentage skills_pyt"></span>
                   </div>
                 </div>
                 <div class="skills_data">
@@ -462,7 +524,7 @@
             <!--======== SKILL 3 =========-->
             <div class="skills_content skills_close">
               <div class="skills_header">
-                <i class="uil uil-server-network skills_icon"></i>
+                <i class="uil uil-server-network-alt skills_icon"></i>
                 <div>
                   <h1 class="skill_title">Back-End Development</h1>
                   <span class="skill_subtitle">NodeJS, Python, Firebase</span>
@@ -723,17 +785,293 @@
         </div>
       </section>
 
+      <section class="certificates section">
+        <h2 class="section_title">Certificates</h2>
+        <span class="section_subtitle">Here are some certificates of the courses done by me</span>
+
+        <div class="certificates_container container grid">
+           <!--====CERT 1====-->
+           <div class="certificates_content">
+              <div>
+                <h3 class="certificates_title">Introduction to the Internet of Things and Embedded Systems</h3>
+                <a href="https://coursera.org/share/236af7427891cd16454c4aa5a6883111" class="certificates_link">Click here to view certificate</a>
+              </div>
+           </div>
+
+           <div class="certificates_content">
+            <div>
+              <h3 class="certificates_title">Interfacing with the Arduino</h3>
+              <a href="https://coursera.org/share/14088b59f427e763eb68f952368a7878" class="certificates_link">Click here to view certificate</a>
+            </div>
+          </div>  
+
+          <div class="certificates_content">
+            <div>
+              <h3 class="certificates_title">The Arduino Platform and C Programming</h3>
+              <a href="https://coursera.org/share/0242f85a59586a5118161845ab28f99a" class="certificates_link">Click here to view certificate</a>
+            </div>
+          </div>  
+        </div>
+      </section>
       <!--==================== PROJECTS ====================-->
-      <section class="project section" id="services"></section>
+      <section class="projects section" id="projects">
+        <h2 class="section_title">Projects</h2>
+        <span class="section_subtitle">My works and projects in different domains</span>
 
-      <!--==================== PORTFOLIO ====================-->
-      <section class="portfolio section" id="portfolio"></section>
+        <div class="projects_filters">
+          <span class="projects_item">All</span>
+          <span class="projects_item">IoT and Embedded Systems</span>
+          <span class="projects_item">Web Development</span>
+          <!--<span class="projects_item">M.L. Projects</span>
+          <span class="projects_item">Research Projects</span>-->
+        </div>
 
-      <!--==================== PROJECT IN MIND ====================-->
-      <section class="project section"></section>
+        <div class="projects_container container grid">
 
-      <!--==================== TESTIMONIAL ====================-->
-      <section class="testimonial section"></section>
+          <div class="projects_card">
+            <img src="rfid attendance.jpg" alt="" class="projects_img">
+            <h3 class="projects_title">RFID Attendance System using Nodemcu 1.0</h3>
+            <span class="projects_button">
+              Details <i class="uil uil-arrow-right projects_icon"></i>
+            </span>
+          
+          <div class="projects_modal">
+            <div class="projects_modal-content">
+              <i class="uil uil-times projects_modal-close"></i>
+
+              <h3 class="projects_modal-title">RFID Attendance System</h3>
+              <p class="projects_modal-description">
+                An RFID attendance system using ESP8266 is a project that uses radio frequency identification (RFID) technology to record the presence of projectsers or students.
+              <br>  <b>You can check the video of the project here : <a href="https://youtu.be/fw1OZ9d7dZk?si=o_nvdExZLAWPhF4-">Click here</a></b> 
+              </p>
+
+              <ul class="projects_modal-list">
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      The system consists of an ESP8266 development board, an MFRC522 RFID reader, and a web application (I used Google Sheets) that stores and displays the attendance data.
+                    </p>
+                </li>
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      The ESP8266 connects to the internet via Wi-Fi and sends the scanned RFID card data to Google Sheets using HTTP requests.
+                    </p>
+                </li>
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      The web application can also provide features such as time-in, time-out, and multiple gate entry options. 
+                    </p>
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+          </div>
+
+          <div class="projects_card">
+            <img src="esp32mail.png" alt="" class="projects_img">
+            <h3 class="projects_title">Sending Mail using ESP32 and ESP8266</h3>
+            <span class="projects_button">
+              Details <i class="uil uil-arrow-right projects_icon"></i>
+            </span>
+          
+          <div class="projects_modal">
+            <div class="projects_modal-content">
+              <i class="uil uil-times projects_modal-close"></i>
+
+              <h3 class="projects_modal-title">Sending mail using ESP32 and SMTP server.</h3>
+              <p class="projects_modal-description">
+              
+              </p>
+
+              <ul class="projects_modal-list">
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      Mail is sent using ESP32 and ESP8266.
+                    </p>
+                </li>
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      SMTP server is used.
+                    </p>
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+          </div>
+
+          <div class="projects_card">
+            <img src="espservo.jpg" alt="" class="projects_img">
+            <h3 class="projects_title">Controlling Servo Motors using ESP8266</h3>
+            <span class="projects_button">
+              Details <i class="uil uil-arrow-right projects_icon"></i>
+            </span>
+          
+          <div class="projects_modal">
+            <div class="projects_modal-content">
+              <i class="uil uil-times projects_modal-close"></i>
+
+              <h3 class="projects_modal-title">Controlling Servo Motors with webserver using ESP8266</h3>
+              <p class="projects_modal-description">
+              It works in SoftAP mode and user can control servo motor using web server. <br>
+              <b>You can check the video of the project here : <a href="https://youtu.be/-44EohnE2zc?si=B4wuOW9K8oLJCBy_">Click here</a></b> 
+              </p>
+
+              <ul class="projects_modal-list">
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      ESP8266 creates its own Wi-Fi network and user connects to it using appropriate password.
+                    </p>
+                </li>
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      It works in Soft Access Mode (SoftAP)
+                    </p>
+                </li>
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      User can access the web page and control Servo motor using web server.
+                    </p>
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+          </div>
+
+          <div class="projects_card">
+            <img src="Obst.png" alt="" class="projects_img">
+            <h3 class="projects_title">Obstacle Avoidance Robot</h3>
+            <span class="projects_button">
+              Details <i class="uil uil-arrow-right projects_icon"></i>
+            </span>
+          
+          <div class="projects_modal">
+            <div class="projects_modal-content">
+              <i class="uil uil-times projects_modal-close"></i>
+
+              <h3 class="projects_modal-title">Obstacle Avoiding Robot</h3>
+              <p class="projects_modal-description">
+                <b>You can check the video of the project here : <a href="https://youtu.be/ZUA3owXxSgo?si=vDgIgdW3Dp4s-RF4">Click here</a></b> 
+              </p>
+
+              <ul class="projects_modal-list">
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      L293D motor driver shield was used.
+                    </p>
+                </li>
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      The robot detects any obstacle with Ultrasonic Distance Sensor (HC-SR-04).
+                    </p>
+                </li>
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      It moves automatically in the obstacle free path.
+                    </p>
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+          </div>
+
+          <div class="projects_card">
+            <img src="pantilt.png" alt="" class="projects_img">
+            <h3 class="projects_title">Pantilt Security Camera</h3>
+            <span class="projects_button">
+              Details <i class="uil uil-arrow-right projects_icon"></i>
+            </span>
+          
+          <div class="projects_modal">
+            <div class="projects_modal-content">
+              <i class="uil uil-times projects_modal-close"></i>
+
+              <h3 class="projects_modal-title">Pantilt Security Camera</h3>
+              <p class="projects_modal-description">
+                ESP32-Cam is used to capture photos/videos and control Pan-Tilt with the help of Web server.
+              </p>
+
+              <ul class="projects_modal-list">
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      Soft Access Point is used here. So the ESP32-Cam module creates its own wifi network.
+                    </p>
+                </li>
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      Users can connect to the ip address by using any browser after connecting to the Wi-Fi network created by ESP32-Cam.
+                    </p>
+                </li>
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      From the web server, the user can see the captured photos/videos and control the movement of the Pan tilt.
+                    </p>
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+          </div>
+
+          <div class="projects_card">
+            <img src="webimg.jpg" alt="" class="projects_img">
+            <h3 class="projects_title">Portfolio Website</h3>
+            <span class="projects_button">
+              Details <i class="uil uil-arrow-right projects_icon"></i>
+            </span>
+          
+          <div class="projects_modal">
+            <div class="projects_modal-content">
+              <i class="uil uil-times projects_modal-close"></i>
+
+              <h3 class="projects_modal-title">Portfolio Website</h3>
+              <p class="projects_modal-description">
+                My personal portfolio website.
+              </p>
+
+              <ul class="projects_modal-list">
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+                      HTML, CSS and Javascript is used to make it.
+                    </p>
+                </li>
+                <!--<li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+
+                    </p>
+                </li>
+                <li class="projects_modal-item">
+                  <i class="uil uil-angle-right-b projects_modal-icon"></i>
+                    <p class="projects_modal-info">
+
+                    </p>
+                </li>-->
+               
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
 
       <!--==================== CONTACT ME ====================-->
       <section class="contact section" id="contact">
@@ -742,16 +1080,16 @@
 
           <div class="contact_container container grid">
             <div>
-              <!--<div class="contact_info">
-                <i class="uil uil-phone contact_icon"></i>
+              <div class="contact_info">
+                <i class="uil uil-envelope-alt contact_icon"></i>
 
                 <div>
-                    <h3 class="contact_title">Call Me</h3>
-                    <span class="contact_subtitle">+91-xxxxxxxxxx</span>
+                    <h3 class="contact_title">Email</h3>
+                    <span class="contact_subtitle">ap2004pal@gmail.com</span>
                 </div>
               </div>
 
-              <div class="contact_info">
+              <!--<div class="contact_info">
                 <i class="uil uil-phone contact_icon"></i>
 
                 <div>
@@ -799,10 +1137,50 @@
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer_bg">
+        <div class="footer_container container grid">
+          <div>
+            <h1 class="footer_title">Arkaprabha</h1>
+            <span class="footer_subtitle">Sophomore at Jadavpur University</span>
+          </div>
+
+          <ul class="footer_links">
+            <li>
+              <a href="#skills" class="footer_link">Skills</a>
+            </li>
+            <li>
+              <a href="#projects" class="footer_link">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" class="footer_link">About</a>
+            </li>
+          </ul>
+
+          <div class="footer_socials">
+            <a href="caution.html" class="footer_social">
+              <i class="uil uil-facebook-f"></i>
+            </a>
+            <a href="www.linkedin.com/in/arkaprabha-p-343b49251" class="footer_social">
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
+            <a href="https://instagram.com/ark_p_p?igshid=ZDdkNTZiNTM=" class="footer_social">
+              <i class="uil uil-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <p class="footer_copy">&#169;Created by Arka.</p>
+      </div>
+    </footer>
 
     <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="uil uil-angle-double-up scrollup_icon"></i>
+    </a>
 
+    <!--==================== SWIPER JS ====================-->
+    <script src="swiper-bundle.min.js"></script>
     <!--==================== EMAIL JS ====================-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
