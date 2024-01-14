@@ -1042,7 +1042,7 @@ width: 200%;
 }
 
 /* For medium devices */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 568px) {
   .home_content{
     grid-template-columns: max-content 1fr 1fr;
   }
@@ -1197,6 +1197,9 @@ width: 200%;
     grid-template-columns: repeat(3, 238px);
   }
 
+  .projects_container{
+      grid-template-columns: repeat(2, 238px);
+  }
   .activities_content{
     column-gap: 5rem;
   }
