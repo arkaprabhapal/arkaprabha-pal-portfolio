@@ -1196,10 +1196,6 @@ width: 200%;
   .certificates_container{
     grid-template-columns: repeat(3, 238px);
   }
-
-  .projects_container{
-      grid-template-columns: repeat(2, 238px);
-  }
   .activities_content{
     column-gap: 5rem;
   }
