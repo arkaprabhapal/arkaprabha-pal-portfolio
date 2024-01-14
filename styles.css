@@ -441,6 +441,7 @@ width: 200%;
 .swiper-button-prev::after,
 .swiper-button-next::after{
   visibility: hidden;
+    content : '';
 }
 
 .swiper-activities-icon{
