@@ -992,7 +992,7 @@ width: 200%;
 /* For small devices */
 @media screen and (max-width: 350px) {
   .container{
-    margin-left: var(--mb-1);
+    margin-left: auto;
     margin-right: var(--mb-1);
   }
   
