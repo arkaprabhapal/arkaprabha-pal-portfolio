@@ -986,55 +986,9 @@ width: 200%;
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px) {
-  .container{
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
-  }
-  
-  .nav_menu{
-    padding: 2rem .25rem 4rem; 
-  }
-  .nav_list{
-    column-gap: 0;
-  }
-  .home_content{
-    grid-template-columns: .25fr 3fr;
-  }
-  .home_blob{
-    width: 180px;
-  }
 
-  .skills_title{
-    font-size: var(--normal-font-size);
-  }
-
-  .qualification_data{
-    gap: .5rem;
-  }
-
-  .certificates_container{
-    grid-template-columns: max-content;
-    justify-content: center;
-  }
-  .certificates_content{
-    padding-right: 3.5rem;
-  }
-  
-}
 
 /* For medium devices */
 
 
 /* For large devices */
-@media screen and (min-width: 1024px){
-  .header
-  .main,
-  .footer_container{
-    padding: 0;
-  }
-
-  .home_blob{
-    width: 320px;
-  }
-}
